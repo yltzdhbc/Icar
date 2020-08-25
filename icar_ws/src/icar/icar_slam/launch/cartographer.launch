@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- 参数 -->
+  <arg name="configuration_basename" default="lds_2d.lua"/>
+
+  <!-- 启动cartographer_ros节点 -->
+  <node pkg="cartographer_ros" type="cartographer_node" name="cartographer_node" args="  
+            -configuration_directory $(find icar_slam)/config  
+            -configuration_basename $(arg configuration_basename)" output="screen">
+    <remap from="scan" to="scan" />
+  </node>
+
+</launch>

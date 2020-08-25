@@ -1,0 +1,28 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/weki/icar_ws/devel/include",
+                "/home/weki/cartographer_ws/install_isolated/include",
+                "/home/weki/catkin_ws/devel/include",
+                "/opt/ros/kinetic/include",
+                "/home/weki/icar_ws/src/icar_connect_basecore/include",
+                "/home/weki/icar_ws/src/icar_core/include",
+                "/home/weki/icar_ws/src/icar_precise_move/include",
+                "/home/weki/icar_ws/src/move_base/include",
+                "/home/weki/icar_ws/src/bobac2_audio/speech_synthesis/include",
+                "/usr/include"
+            ],
+            "name": "Linux",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

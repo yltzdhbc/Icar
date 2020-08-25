@@ -1,0 +1,50 @@
+# base_local_planner负责把上层规划器计算的速度指令发送给移动基座。
+# 我们需要根据我们的机器人的规格来设置一些配置选项，以便开始运行。
+
+# controller_frequency: 2.0
+# recovery_behavior_enabled: true
+# clearing_rotation_allowed: true
+
+TrajectoryPlannerROS:
+   max_vel_x: 0.25 #0.3
+   min_vel_x: 0.05 #0.05
+
+   # max_vel_y: 0.0 # zero for a differential drive robot
+   # min_vel_y: 0.0
+
+   max_vel_theta: 0.8
+   min_vel_theta: -0.8
+   min_in_place_vel_theta: 1.0
+
+   # escape_vel: -0.1
+   acc_lim_x: 1.0
+   acc_lim_y: 0.0 # zero for a differential drive robot
+   acc_lim_theta: 0.6 #3.2
+
+   #是否为全向机器人。 值为false时为差分机器人； 为true时表示全向机器人
+   holonomic_robot: false
+
+   xy_goal_tolerance: 0.1 # 10 cm
+   yaw_goal_tolerance: 0.05 # about 6 degrees
+
+   # latch_xy_goal_tolerance: false
+   # pdist_scale: 0.9
+   # gdist_scale: 0.6
+   # meter_scoring: true
+
+   # heading_lookahead: 0.325
+   # heading_scoring: false
+   # heading_scoring_timestep: 0.8
+   # occdist_scale: 0.1
+   # oscillation_reset_dist: 0.05
+   # publish_cost_grid_pc: false
+   # prune_plan: true
+
+   sim_time: 0.8
+   sim_granularity: 0.05
+   # angular_sim_granularity: 0.025
+   vx_samples: 18
+   # vy_samples: 0 # zero for a differential drive robot
+   vtheta_samples: 20
+   # dwa: true
+   # simple_attractor: false
